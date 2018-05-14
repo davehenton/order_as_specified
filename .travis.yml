@@ -1,3 +1,6 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=f8edcd00ce06ade020fa17a66b2481c4464fac216903f7f4a5fcfc04b457159e
 language: ruby
 rvm:
 - 2.2.5
@@ -14,8 +17,6 @@ after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 addons:
   postgresql: "9.3"
-  code_climate:
-    repo_token: 781c439d68cbb928316deaec1c7136f98423e1db87238f99cbc95183de94df9e
 env:
   matrix:
     - AR_VERSION="~> 5.0.0"
